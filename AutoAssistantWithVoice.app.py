@@ -31,7 +31,10 @@ if st.button("🚀 Diagnose"):
         st.info("Transcribing your audio with Whisper...")
         try:
             audio_file.name = "audio.wav"  # Required by Whisper
-            transcript = openai.Audio.transcribe("whisper-1", audio_file)
+            transcript = client.audio.transcriptions.create(
+            model="whisper-1",
+            file=audio_file
+            )
             final_input = transcript["text"]
             st.success(f"Transcribed: {final_input}")
         except Exception as e:
