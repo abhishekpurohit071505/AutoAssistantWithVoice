@@ -38,7 +38,7 @@ if st.button("🚀 Diagnose"):
             model="whisper-1",
             file=audio_file
             )
-            final_input = transcript["text"]
+            final_input = transcript.text
             st.success(f"Transcribed: {final_input}")
         except Exception as e:
             st.error(f"Transcription failed: {e}")
