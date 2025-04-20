@@ -3,6 +3,9 @@ import openai
 import requests
 import os
 from io import BytesIO
+from openai import OpenAI
+
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Set your OpenAI API key securely
 openai.api_key = st.secrets["OPENAI_API_KEY"]
