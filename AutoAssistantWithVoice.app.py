@@ -19,7 +19,7 @@ st.title("🔧 AutoFix Assistant")
 st.subheader("Diagnose and Fix Your Vehicle Problems")
 
 # ---- AUDIO INPUT VIA FILE UPLOAD ----
-st.markdown("### 🎤 Speak your issue (optional)")
+#st.markdown("### 🎤 Speak your issue (optional)")
 audio_file = st.file_uploader("Upload your voice (MP3, WAV, M4A)", type=["mp3", "wav", "m4a"])
 
 # ---- TEXT INPUT ----
